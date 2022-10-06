@@ -1,16 +1,25 @@
-# Homework 1 - leaves
+# Homework 2 - crypt-arithmetic
 
-Write a program that receives a binary tree encoded using the structure `$node(Value,LeftChild,RightChild)` and outputs the list of its leaves (childless nodes) in prefix order (e.g., as in DFS). See the assignment on GitHub Classroom. For example:
+1. Write a program that accepts a general crypt-arithmetic puzzle on the input and outputs a solution as a string where letters are replaced by digits, e.g.
 ```
-picat leaves.pi "node(42,nil,nil)"
-picat leaves.pi "node(1,node(2,nil,nil),node(3,nil,nil))"
-picat leaves.pi "node(1,node(2,node(3,node(4,nil,nil),node(5,nil,nil)),nil),node(6,node(7,nil,nil),node(8,nil,nil)))"
+picat crypt-arithmetic.pi SEND MORE MONEY
 ```
-should output:
-```
-[42]
-[2,3]
-[4,5,7,8]
-```
+should output `9567 + 1085 = 10652` (since this is the only solution). Don't forget to include the spaces.
 
-Push to your Github classroom repository and see if it passes the test.
+2. Ignore case, e.g. accept also:
+```
+picat crypt-arithmetic.pi Donald Gerard Robert
+picat crypt-arithmetic.pi baijjajiiahfcfebbjea dhfgabcdidbiffagfeje gjegacddhfafjbfiheef
+```
+(source of the last instance: [Hakan Kjellerstrand's library](http://www.hakank.org/), may run for a long time)
+
+2. Modify your program to accept the flag `-c` to output the number of solutions instead, e.g.
+```
+picat crypt-arithmetic.pi -c send more money
+picat crypt-arithmetic.pi -c aa aa bb 
+```
+should output `1` and `4`.
+
+Your model must be reasonably efficient, e.g. use the carry bit implementation.
+
+See the assignment on GitHub Classroom. See `parse-input.pi` for code that you can use to parse the input.
