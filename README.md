@@ -8,7 +8,7 @@ should output `9567 + 1085 = 10652` (since this is the only solution). Don't for
 
 2. Ignore case, e.g. accept also:
 ```
-picat crypt-arithmetic.pi Donald Gerard Robert
+picat crypt-arithmetic.pi Donald Gerald Robert
 picat crypt-arithmetic.pi baijjajiiahfcfebbjea dhfgabcdidbiffagfeje gjegacddhfafjbfiheef
 ```
 (source of the last instance: [Hakan Kjellerstrand's library](http://www.hakank.org/), may run for a long time)
